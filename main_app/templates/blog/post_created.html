@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Sontus Tripura</title>
+</head>
+<body>
+{% for post in posts %}
+   <div class="">
+     <p> Publish Date: {{ post.publish_date }}</p>
+     <h2><a href="#">{{ post.title }}</a></h2>
+      <p>{{ post.text }}</p>
+   </div>
+{% endfor %}
+</body>
+</html>
