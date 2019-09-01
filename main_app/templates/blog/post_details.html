@@ -7,12 +7,12 @@
     <title>Sontus Tripura</title>
 </head>
 <body>
-{% for post in posts %}
-    <div>
-       <p> Publish Date: {{ post.publish_date }}</p>
-       <h2><a href="{% url 'post_details' pk=post.pk %}">{{ post.title }}</a></h2>
-        <p>{{ post.text|linebreaksbr }}</p>
-    </div>
-{% endfor %}
+  {% if post.publish_date %}
+         <div>
+              {{ post.publish_date }}
+         </div>
+  {% endif%}
+  <h2>{{ post.title }}</h2>
+   <p>{{ post.text|linebreaksbr }}</p>
 </body>
 </html>
