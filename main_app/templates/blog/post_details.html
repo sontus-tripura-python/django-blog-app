@@ -1,18 +1,11 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Sontus Tripura</title>
-</head>
-<body>
-  {% if post.publish_date %}
-         <div>
-              {{ post.publish_date }}
-         </div>
-  {% endif%}
-  <h2>{{ post.title }}</h2>
-   <p>{{ post.text|linebreaksbr }}</p>
-</body>
-</html>
+{% extends 'blog/base.html' %}
+
+ {% block body %}
+    {% if post.publish_date %}
+           <div>
+                {{ post.publish_date }}
+           </div>
+    {% endif%}
+    <h2>{{ post.title }}</h2>
+     <p>{{ post.text|linebreaksbr }}</p>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% load staticfiles %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
+    <link rel="stylesheet" href="{% static 'css/django-blog.css' %} " />
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %} " />
+
+    <title>Sontus Tripura</title>
+</head>
+
+<body>
+  <div class="headersection">
+  <div class="container">
+      <div class="left-header">
+        <h4><a href="{% url "post_created" %}">PYTHON BLOG</a></h4>
+      </div>
+      <div class="right-link">
+        <ul>
+          <li><a href="#"><i class="fab fa-github"></i></a></li>
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li>  <a href="#"><i class="fab fa-youtube"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    </div>
+<div class="container">
+<div class="row">
+  <div class="col-8-md">
+   {% block body %}
+
+
+   {% endblock%}
+  </div>
+</div>
+</div>
+<div class="footersetion">
+  <div class="container">
+    <div class="text-center">
+      <h4>&copy 2019 DEVELOPED BY <a href="sontustrp.com">SONTUSTRP.COM</a></h4>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
